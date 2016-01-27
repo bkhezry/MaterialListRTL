@@ -136,7 +136,11 @@ public class MaterialListAdapter extends RecyclerView.Adapter<MaterialListAdapte
             add(index++, card, false);
         }
     }
-
+    public void addAllEnd(@NonNull final Collection<Card> cards) {
+        for (Card card : cards) {
+            add(card);
+        }
+    }
     /**
      * Remove a Card withProvider or without an animation.
      *
