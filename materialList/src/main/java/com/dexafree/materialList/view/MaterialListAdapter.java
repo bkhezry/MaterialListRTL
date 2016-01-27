@@ -113,7 +113,9 @@ public class MaterialListAdapter extends RecyclerView.Adapter<MaterialListAdapte
     public void add(@NonNull final Card card) {
         add(mCardList.size(), card);
     }
-
+    public void addEnd(@NonNull final Card card) {
+        add(mCardList.size(), card,false);
+    }
     /**
      * Add all Cards.
      *
@@ -138,7 +140,7 @@ public class MaterialListAdapter extends RecyclerView.Adapter<MaterialListAdapte
     }
     public void addAllEnd(@NonNull final Collection<Card> cards) {
         for (Card card : cards) {
-            add(card);
+            addEnd(card);
         }
     }
     /**
